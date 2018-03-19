@@ -96,9 +96,11 @@ public class Main_ {
 //	        }
 //		
 	        
-	        /*
-	         * 
-	         * 
+	        /*Trying to disable ssl validations  
+	         * http://www.java2s.com/Code/Java/Network-Protocol/DisablingCertificateValidationinanHTTPSConnection.htm
+	         * https://log.rowanto.com/java-8-turning-off-ssl-certificate-check/
+
+	         
 	        final TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
 	            @Override
 	            public void checkClientTrusted( final X509Certificate[] chain, final String authType ) {
@@ -120,10 +122,7 @@ public class Main_ {
 	        *
 	        *
 	        */
-	        
-	    ////////////////////
-	        
-	        //////////////////////
+
 		SmileHttpClient smileHttpClient = new SmileHttpClient(trustStore,"changeit","https://qa.interswitchng.com/kmw/kimonoservice");
 		smileHttpClient.postRequest(xmlRequest);
 		System.out.println(smileHttpClient.postRequest(xmlRequest));
